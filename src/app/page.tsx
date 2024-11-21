@@ -216,7 +216,7 @@ export default function ProposalPage() {
         targetId="role"
       >
         <div className="text-center">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 tracking-tight pt-10">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-12 tracking-tight">
             About Me
           </h2>
 
