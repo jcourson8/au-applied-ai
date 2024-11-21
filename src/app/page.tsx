@@ -292,7 +292,7 @@ export default function ProposalPage() {
 
         <div className="space-y-8">
           <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
-            As an AI Implementation Specialist, I would help students bridge the
+            As an Practical AI Implementation Specialist, I would help students bridge the
             gap between AI theory and practical implementation through hands-on
             mentorship and project development.
           </p>
