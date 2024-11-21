@@ -60,7 +60,7 @@ const Section = React.forwardRef<HTMLElement, SectionProps>(
     <section
       ref={ref}
       id={id}
-      className={`min-h-[100dvh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 ${className}`}
+      className={`min-h-[100dvh] flex flex-col justify-center px-4 sm:px-6 lg:px-8 relative isolate ${className}`}
     >
       {children}
     </section>
@@ -147,12 +147,12 @@ export default function ProposalPage() {
             AU
           </h1>
           <div className="space-y-4 mb-12">
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
-              Through the AI@AU Initiative and our MS in Artificial Intelligence
+            <p className="text-md sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+              Through the AI@AU Initiative and the MS in Artificial Intelligence
               Engineering program, Auburn University has established itself as a
               leader in AI education.
             </p>
-            <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-md sm:text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
               While students master advanced AI concepts, a dedicated{" "}
               <span className="text-orange-600">applied practice</span> will
               empower them to turn this knowledge into{" "}
@@ -160,12 +160,12 @@ export default function ProposalPage() {
               <span className="text-orange-600">career-ready skills</span>.
             </p>
           </div>
-          <ScrollButton
+        </div>
+        <ScrollButton
             targetId="vision"
             ariaLabel="Scroll to next section"
             message={true}
           />
-        </div>
       </Section>
 
       {/* Vision Section */}
@@ -180,10 +180,10 @@ export default function ProposalPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight">
                 Current Landscape
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Auburn University&apos;s AI@AU Initiative and MS in Artificial
                 Intelligence Engineering program have established a strong
                 foundation. Now, we have the opportunity to complement this
@@ -191,10 +191,10 @@ export default function ProposalPage() {
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight">
                 Practical Impact
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Practical AI@AU will create a space where students gain the
                 development skills essential for real-world success. Through
                 hands-on projects and mentoring, students will develop practical
@@ -215,10 +215,10 @@ export default function ProposalPage() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight">
                 Industry Preparation
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Students will build portfolio-ready projects and gain{" "}
                 <span className="text-orange-600">hands-on experience</span>{" "}
                 with real-world AI applications, bridging the gap between
@@ -226,10 +226,10 @@ export default function ProposalPage() {
               </p>
             </div>
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight">
                 Research Development
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Research-focused students will develop practical implementation
                 skills to accelerate prototyping and{" "}
                 <span className="text-orange-600">
@@ -256,29 +256,29 @@ export default function ProposalPage() {
 
           <div className="space-y-16">
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-gray-900">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight text-gray-900">
                 Hands-on Project Experience
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Build real AI applications from scratch - chatbots, computer
                 vision apps, and more.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-gray-900">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight text-gray-900">
                 Interactive Learning
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Weekly sessions and one-on-one project mentorship.
               </p>
             </div>
 
             <div className="space-y-4">
-              <h3 className="text-xl sm:text-2xl font-semibold tracking-tight text-gray-900">
+              <h3 className="text-lg sm:text-2xl font-semibold tracking-tight text-gray-900">
                 Develop Practical Skills
               </h3>
-              <p className="text-base sm:text-lg text-gray-600 leading-relaxed">
+              <p className="text-sm sm:text-lg text-gray-600 leading-relaxed">
                 Master essential tools and techniques - from API integration to
                 deployment.
               </p>
@@ -303,7 +303,7 @@ export default function ProposalPage() {
           </h2>
 
           <div className="text-left space-y-8">
-            <div className="space-y-4 text-md md:text-lg">
+            <div className="space-y-4 text-sm md:text-lg">
               <p className="text-gray-600 leading-relaxed">
                 As a software engineer at Auburn&apos;s Military REACH Program, I&apos;ve led the modernization of{" "}
                 <a
@@ -472,16 +472,16 @@ export default function ProposalPage() {
           </h2>
           
           <div className="space-y-8">
-            <p className="text-md md:text-lg text-gray-600 leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-600 leading-relaxed">
               As an AI Implementation Specialist, I would help students bridge the gap between AI theory and practical implementation through hands-on mentorship and project development.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
+                <h3 className="text-lg font-semibold tracking-tight text-gray-900">
                   Technical Mentorship
                 </h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="text-sm space-y-2 text-gray-600">
                   <li className="flex items-start">
                     <span className="text-orange-600 mr-2">•</span>
                     Guide real AI application development
@@ -498,10 +498,10 @@ export default function ProposalPage() {
               </div>
 
               <div className="space-y-4">
-                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
+                <h3 className="text-lg font-semibold tracking-tight text-gray-900">
                   Project Development
                 </h3>
-                <ul className="space-y-2 text-gray-600">
+                <ul className="text-sm  space-y-2 text-gray-600">
                   <li className="flex items-start">
                     <span className="text-orange-600 mr-2">•</span>
                     Create project templates and starter kits
