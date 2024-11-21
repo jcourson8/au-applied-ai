@@ -353,20 +353,9 @@ export default function ProposalPage() {
               </p>
             </div>
 
-            <div className="max-w-xl mx-auto relative">
-              {/* Card with ref */}
-              <div 
-                ref={cardRef}
-                className={`
-                  bg-white rounded-3xl sm:rounded-3xl rounded-l-3xl rounded-r-none shadow-lg p-8 md:p-12
-                  transition-transform duration-300 ease-in-out
-                  ${isCardVisible ? 'translate-x-0' : 'translate-x-full'}
-                  sm:transform-none sm:translate-x-0
-                  fixed sm:static right-0 top-1/2 sm:top-auto -translate-y-1/2 sm:translate-y-0
-                  w-[90vw] sm:w-full max-w-[400px] sm:max-w-2xl
-                  z-40
-                `}
-              >
+            {/* Desktop-only card */}
+            <div className="hidden sm:block max-w-xl mx-auto">
+              <div className="bg-white rounded-3xl shadow-lg p-8 md:p-12">
                 <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
                   {/* Image Container */}
                   <div className="relative">
@@ -390,6 +379,7 @@ export default function ProposalPage() {
                       <p>Software Engineer</p>
                       <p>Military REACH @ Auburn</p>
                       <p>MS, Cybersecurity Engineering</p>
+                      <p>jbc0071@auburn.edu</p>
                     </div>
 
                     {/* Links */}
@@ -434,26 +424,6 @@ export default function ProposalPage() {
                   </div>
                 </div>
               </div>
-
-              {/* Mobile Tab Button */}
-              {activeSection === 'experience' && (
-                <button 
-                  onClick={() => setIsCardVisible(!isCardVisible)}
-                  className={`
-                    sm:hidden fixed right-0 top-1/2 -translate-y-1/2 bg-orange-600 text-white px-2 py-8 
-                    ${isCardVisible ? 'rounded-l-lg shadow-lg translate-x-[calc(90vw-2rem)]' : 'rounded-l-lg shadow-lg'}
-                    hover:bg-orange-700 transition-all duration-300
-                    ${isCardVisible ? '' : 'animate-subtle-pulse'}
-                    z-50
-                  `}
-                >
-                  <span className="writing-mode-vertical-rl rotate-180 flex items-center gap-2">
-                    <span className="text-sm font-medium">
-                      {isCardVisible ? 'Hide Card' : 'Tap to see my card'}
-                    </span>
-                  </span>
-                </button>
-              )}
             </div>
           </div>
         </div>
@@ -525,6 +495,109 @@ export default function ProposalPage() {
         </div>
       </Section>
 
+      {/* Mobile-only floating card */}
+      <div 
+        ref={cardRef}
+        className={`
+          block sm:hidden
+          bg-white rounded-3xl shadow-lg p-8
+          fixed right-0 top-1/2 -translate-y-1/2
+          w-[90vw] max-w-[400px]
+          z-40
+          ${isCardVisible ? 'translate-x-0' : 'translate-x-full'}
+          transition-transform duration-300 ease-in-out
+        `}
+      >
+        <div className="flex flex-col items-center gap-8">
+          {/* Image Container */}
+          <div className="relative">
+            <div className="w-32 h-32 rounded-full overflow-hidden bg-gray-100">
+              <img 
+                src="/james.jpeg"
+                alt="James Courson"
+                className="w-full h-full object-cover filter saturate-[0.95] hover:saturate-100 transition-all duration-300"
+              />
+            </div>
+            <div className="absolute inset-0 rounded-full bg-gradient-to-b from-black/5 to-transparent pointer-events-none" />
+          </div>
+
+          {/* Content Container */}
+          <div className="text-center">
+            <h3 className="text-2xl font-medium tracking-tight text-gray-900 mb-2">
+              James Courson
+            </h3>
+            
+            <div className="space-y-1.5 mb-6 text-base text-gray-500 font-light">
+              <p>Software Engineer</p>
+              <p>Military REACH @ Auburn</p>
+              <p>MS, Cybersecurity Engineering</p>
+              <p>jbc0071@auburn.edu</p>
+            </div>
+
+            {/* Links */}
+            <div className="flex items-center justify-center gap-6">
+              <a
+                href="https://james-courson.vercel.app/resume"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center"
+              >
+                <span className="text-sm text-gray-600 font-medium group-hover:text-gray-900 transition-colors duration-200">
+                  Resume
+                </span>
+                <svg 
+                  className="w-4 h-4 ml-1 text-gray-400 group-hover:text-gray-600 transition-colors duration-200" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/james-courson-447960161/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center"
+              >
+                <span className="text-sm text-gray-600 font-medium group-hover:text-gray-900 transition-colors duration-200">
+                  LinkedIn
+                </span>
+                <svg 
+                  className="w-4 h-4 ml-1 text-gray-400 group-hover:text-gray-600 transition-colors duration-200" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Mobile Tab Button */}
+      {(activeSection === 'experience' || activeSection === 'role') && !isCardVisible && (
+        <button 
+          onClick={() => setIsCardVisible(true)}
+          className={`
+            block sm:hidden
+            fixed right-0 top-1/2 -translate-y-1/2 
+            bg-orange-600 text-white px-2 pr-7 py-8 
+            rounded-l-lg shadow-lg
+            hover:bg-orange-700 transition-all duration-300
+            animate-subtle-pulse
+            z-50 transform-gpu
+          `}
+        >
+          <span className="writing-mode-vertical-rl rotate-180 flex items-center gap-2">
+            <span className="text-sm font-medium">
+              Tap to see my card
+            </span>
+          </span>
+        </button>
+      )}
     </div>
   );
 }

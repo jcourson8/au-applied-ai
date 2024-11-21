@@ -17,6 +17,12 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Auburn University AI Education",
   description: "Auburn University AI Education",
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+    userScalable: false,
+  },
 };
 
 export default function RootLayout({
