@@ -9,8 +9,8 @@ const NAVIGATION_ITEMS = [
   { id: "vision", label: "Vision" },
   { id: "impact", label: "Impact" },
   { id: "approach", label: "Approach" },
-  { id: "role", label: "Role" },
   { id: "experience", label: "Experience" },
+  { id: "role", label: "Role" },
 ];
 
 // Add TableOfContents component
