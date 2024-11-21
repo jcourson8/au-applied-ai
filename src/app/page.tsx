@@ -5,16 +5,6 @@ import ContactCard from "@/components/ContactCard";
 import Section from "@/components/Section";
 import TableOfContents from "@/components/TableOfContents";
 
-// Update navigation items to include new role section
-export const NAVIGATION_ITEMS = [
-  { id: "hero", label: "Intro" },
-  { id: "vision", label: "Vision" },
-  { id: "impact", label: "Impact" },
-  { id: "approach", label: "Approach" },
-  { id: "experience", label: "Experience" },
-  { id: "role", label: "Role" },
-];
-
 // Main page component
 export default function ProposalPage() {
   const [activeSection, setActiveSection] = React.useState("hero");

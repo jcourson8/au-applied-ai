@@ -1,6 +1,12 @@
-import { NAVIGATION_ITEMS } from "@/app/page";
+const NAVIGATION_ITEMS = [
+  { id: "hero", label: "Intro" },
+  { id: "vision", label: "Vision" },
+  { id: "impact", label: "Impact" },
+  { id: "approach", label: "Approach" },
+  { id: "experience", label: "Experience" },
+  { id: "role", label: "Role" },
+];
 
-// Add TableOfContents component
 const TableOfContents = ({ activeSection }: { activeSection: string }) => {
   const scrollToSection = (elementId: string) => {
     const element = document.getElementById(elementId);
