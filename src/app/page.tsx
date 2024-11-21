@@ -286,75 +286,9 @@ export default function ProposalPage() {
           </div>
         </div>
         <ScrollButton
-          targetId="role"
+          targetId="experience"
           ariaLabel="Scroll to next section"
         />
-      </Section>
-
-      {/* Role Section */}
-      <Section
-        id="role"
-        ref={roleSection.ref}
-        className="relative"
-      >
-        <div className="max-w-4xl mx-auto px-8">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight">
-            Proposed Role
-          </h2>
-          
-          <div className="space-y-8">
-            <p className="text-md md:text-lg text-gray-600 leading-relaxed">
-              As an AI Implementation Specialist, I would help students bridge the gap between AI theory and practical implementation through hands-on mentorship and project development.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
-                  Technical Mentorship
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Guide real AI application development
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Provide hands-on development assistance
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Support implementation challenges
-                  </li>
-                </ul>
-              </div>
-
-              <div className="space-y-4">
-                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
-                  Project Development
-                </h3>
-                <ul className="space-y-2 text-gray-600">
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Create project templates and starter kits
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Develop hands-on training materials
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Host weekly implementation workshops
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-orange-600 mr-2">•</span>
-                    Lead one-on-one project guidance
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <ScrollButton targetId="experience" ariaLabel="Scroll to next section" />
       </Section>
 
       {/* Experience Section */}
@@ -523,7 +457,74 @@ export default function ProposalPage() {
             </div>
           </div>
         </div>
+        <ScrollButton targetId="role" ariaLabel="Scroll to next section" />
       </Section>
+
+      {/* Role Section */}
+      <Section
+        id="role"
+        ref={roleSection.ref}
+        className="relative"
+      >
+        <div className="max-w-4xl mx-auto px-8">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 tracking-tight">
+            Proposed Role
+          </h2>
+          
+          <div className="space-y-8">
+            <p className="text-md md:text-lg text-gray-600 leading-relaxed">
+              As an AI Implementation Specialist, I would help students bridge the gap between AI theory and practical implementation through hands-on mentorship and project development.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
+                  Technical Mentorship
+                </h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Guide real AI application development
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Provide hands-on development assistance
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Support implementation challenges
+                  </li>
+                </ul>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold tracking-tight text-gray-900">
+                  Project Development
+                </h3>
+                <ul className="space-y-2 text-gray-600">
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Create project templates and starter kits
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Develop hands-on training materials
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Host weekly implementation workshops
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-orange-600 mr-2">•</span>
+                    Lead one-on-one project guidance
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </Section>
+
     </div>
   );
 }
