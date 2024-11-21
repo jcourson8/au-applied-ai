@@ -1,5 +1,7 @@
 # Practical AI@AU Proposal Site
 
+[https://au-applied-ai.vercel.app/](https://au-applied-ai.vercel.app/)
+
 A modern, interactive proposal website built with Next.js and TailwindCSS to showcase the vision for practical AI implementation at Auburn University.
 
 ## Overview
